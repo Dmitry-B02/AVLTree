@@ -155,6 +155,12 @@ public class tests {
         }
 
         assertEquals(testSet, testTree.subSet(5, 79)); // проверять headSet и tailSet нет смысла, т.к. они реализованы через subSet
+
+        testTree.clear();
+        testTree.add(1);
+        TreeSet<Integer> testSet1 = new TreeSet<>();
+        testSet1.add(1);
+        assertEquals(testSet1, testTree.subSet(1, 1));
     }
 }
 
