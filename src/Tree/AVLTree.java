@@ -35,7 +35,7 @@ public class AVLTree<T extends Comparable<T>> extends AbstractSet<T> implements 
     }
 
     public Node<T> getNode(T value) {
-        if (find(value) != null && find(value).value == value) return find(value);
+        if (contains(value)) return find(value);
         return null;
     }
 
